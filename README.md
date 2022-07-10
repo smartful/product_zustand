@@ -6,7 +6,7 @@ Product management app with Zustand as state management system.
 
 The app use Vite JS.
 
-### To start
+### To start
 
 The first time install packages :
 
