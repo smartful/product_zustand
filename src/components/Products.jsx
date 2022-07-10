@@ -1,14 +1,24 @@
 import { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import ProductItem from './ProductItem';
-import Loader from '../img/loader.svg';
+import { useStore } from '../store';
+import { isEmptyObject } from '../utils';
+import ProductItem from './ProductItem';
+import loader from '../img/loader.svg';
 
 const Products = () => {
-  const loading = false;
+  const fetchProducts = useStore((state) => state.fetchProducts);
+  const products = useStore((state) => state.products);
+  const loading = useStore((state) => state.loading);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+  console.log('products : ', products);
+
   if (loading) {
     return (
       <Fragment>
-        <Loader />
+        <img src={loader} className="App-logo" alt="loading..." />
       </Fragment>
     );
   }
@@ -26,9 +36,10 @@ const Products = () => {
               <th className="pa2 tl">Taux TVA</th>
             </tr>
           </thead>
-          {/* <tbody>
-            {products !== null && products.map((product) => <ProductItem key={product.id} product={product} />)}
-          </tbody> */}
+          <tbody>
+            {(products !== null || !isEmptyObject(products)) &&
+              products.map((product) => <ProductItem key={product.id} product={product} />)}
+          </tbody>
         </table>
       </div>
       <button className="pa2 ma2 bg-dark-pink bn br-pill">

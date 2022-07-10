@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "reference": "AG745",
+      "designation": "I phone 13 Pro",
+      "unitPrice": "1899",
+      "rate": "20"
+    },
+    {
+      "id": 2,
+      "reference": "AB547",
+      "designation": "Livre sur Elon Musk",
+      "unitPrice": "5.6",
+      "rate": "5.5"
+    },
+    {
+      "id": 1628293830294,
+      "reference": "YKI00577",
+      "designation": "Ours en peluche",
+      "unitPrice": "45499.99",
+      "rate": "20"
+    },
+    {
+      "id": 1628294113570,
+      "reference": "AB547OP90",
+      "designation": "500 grammes de pâtes",
+      "unitPrice": "1.59",
+      "rate": "5.5"
+    },
+    {
+      "id": 1628347193558,
+      "reference": "AB549",
+      "designation": "Flamby",
+      "unitPrice": "3.99",
+      "rate": "5.5"
+    }
+  ]
+}
