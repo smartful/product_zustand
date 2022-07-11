@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import editIcon from '../img/edit.png';
 import deleteIcon from '../img/delete.png';
 
-const ProductItem = () => {
+const ProductItem = ({ product }) => {
   const handleDelete = () => {
     console.log(`Produit ref : ??? a été supprimé`);
   };

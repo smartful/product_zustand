@@ -12,14 +12,14 @@ const Products = () => {
 
   useEffect(() => {
     fetchProducts();
+    console.log('products : ', products);
   }, []);
-  console.log('products : ', products);
 
   if (loading) {
     return (
-      <Fragment>
-        <img src={loader} className="App-logo" alt="loading..." />
-      </Fragment>
+      <div className="flex justify-center">
+        <img src={loader} className="App-logo" alt="loading..." width={300} height={300} />
+      </div>
     );
   }
 

@@ -1,13 +1,16 @@
 import create from 'zustand';
+import { devtools } from 'zustand/middleware';
 
-export const useStore = create((set) => ({
-  products: {},
-  loading: true,
-  fetchProducts: async () => {
-    const response = await fetch('/products');
-    set({
-      products: await response.json(),
-      loading: false,
-    });
-  },
-}));
+export const useStore = create(
+  devtools((set) => ({
+    products: {},
+    loading: true,
+    fetchProducts: async () => {
+      const response = await fetch('http://localhost:5000/products');
+      set({
+        products: await response.json(),
+        loading: false,
+      });
+    },
+  }))
+);
