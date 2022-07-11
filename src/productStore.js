@@ -1,7 +1,7 @@
 import create from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-export const useStore = create(
+export const useProductStore = create(
   devtools((set) => ({
     products: {},
     loading: true,

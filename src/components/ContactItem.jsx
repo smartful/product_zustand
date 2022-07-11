@@ -3,19 +3,18 @@ import { Link } from 'react-router-dom';
 import editIcon from '../img/edit.png';
 import deleteIcon from '../img/delete.png';
 
-const ProductItem = ({ product }) => {
+const ContactItem = ({ contact }) => {
   const handleDelete = () => {
-    console.log(`Produit ref : ${product.designation} a été supprimé`);
+    console.log(`Contact : ${contact.name} a été supprimé`);
   };
 
   return (
     <tr className="striped--mid-gray">
-      <td className="pa2 tr">{product.reference}</td>
-      <td className="pa2 tr">{product.designation}</td>
-      <td className="pa2 tr">{product.unitPrice} €</td>
-      <td className="pa2 tr">{product.rate} %</td>
+      <td className="pa2 tr">{contact.name}</td>
+      <td className="pa2 tr">{contact.email}</td>
+      <td className="pa2 tr">{contact.phone}</td>
       <td className="pa2 tr">
-        <Link to="/add-update-product" className="link white" onClick={() => console.log('Edit product')}>
+        <Link to="/add-update-contact" className="link white" onClick={() => console.log('Edit contact')}>
           <img src={editIcon} alt="edit logo"></img>
         </Link>
       </td>
@@ -26,4 +25,4 @@ const ProductItem = ({ product }) => {
   );
 };
 
-export default ProductItem;
+export default ContactItem;

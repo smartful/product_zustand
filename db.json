@@ -35,5 +35,25 @@
       "unitPrice": "3.99",
       "rate": "5.5"
     }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Mike Field",
+      "email": "mike.field@machin.com",
+      "phone": "555-1899"
+    },
+    {
+      "id": 2,
+      "name": "Sara Jones",
+      "email": "sara.jones@itineris.com",
+      "phone": "555-0134"
+    },
+    {
+      "id": 3,
+      "name": "John Douglas",
+      "email": "john.douglass@truc.org",
+      "phone": "555-4578"
+    }
   ]
 }

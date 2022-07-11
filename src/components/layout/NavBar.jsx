@@ -12,6 +12,11 @@ const NavBar = ({ title }) => {
             Produits
           </Link>
         </button>
+        <button className="pa2 ma2 bg-dark-green bn br-pill">
+          <Link to="/contacts" className="link white">
+            Contacts
+          </Link>
+        </button>
       </div>
     </nav>
   );

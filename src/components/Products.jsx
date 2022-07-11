@@ -1,14 +1,14 @@
 import { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useStore } from '../store';
+import { useProductStore } from '../productStore';
 import { isEmptyObject } from '../utils';
 import ProductItem from './ProductItem';
 import loader from '../img/loader.svg';
 
 const Products = () => {
-  const fetchProducts = useStore((state) => state.fetchProducts);
-  const products = useStore((state) => state.products);
-  const loading = useStore((state) => state.loading);
+  const fetchProducts = useProductStore((state) => state.fetchProducts);
+  const products = useProductStore((state) => state.products);
+  const loading = useProductStore((state) => state.loading);
 
   useEffect(() => {
     fetchProducts();
